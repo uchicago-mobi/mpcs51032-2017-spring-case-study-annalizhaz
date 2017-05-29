@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Charts_Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1M-H1-2pJ" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="187" width="343" height="175"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-m4-eyK">
+                                <rect key="frame" x="14" y="28" width="347" height="31"/>
+                                <connections>
+                                    <action selector="renderCharts" destination="BYZ-38-t0r" eventType="valueChanged" id="Sfd-hd-VjK"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="BsE-zG-eAh">
+                                <rect key="frame" x="14" y="66" width="347" height="31"/>
+                                <connections>
+                                    <action selector="renderCharts" destination="BYZ-38-t0r" eventType="valueChanged" id="hRK-l2-3RW"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="HtG-4o-4oi">
+                                <rect key="frame" x="14" y="104" width="347" height="31"/>
+                                <connections>
+                                    <action selector="renderCharts" destination="BYZ-38-t0r" eventType="valueChanged" id="THX-gI-S9Y"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUk-NJ-pwL" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="414" width="343" height="175"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wlC-m4-eyK" firstAttribute="trailing" secondItem="BsE-zG-eAh" secondAttribute="trailing" id="2lF-E6-2uE"/>
+                            <constraint firstItem="cUk-NJ-pwL" firstAttribute="top" secondItem="d1M-H1-2pJ" secondAttribute="bottom" constant="52" id="6uJ-Ul-r3f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cUk-NJ-pwL" secondAttribute="bottom" constant="78" id="8hY-Fp-zpv"/>
+                            <constraint firstItem="d1M-H1-2pJ" firstAttribute="leading" secondItem="cUk-NJ-pwL" secondAttribute="leading" id="L8U-9H-8XV"/>
+                            <constraint firstItem="wlC-m4-eyK" firstAttribute="leading" secondItem="BsE-zG-eAh" secondAttribute="leading" id="LbJ-0n-mnt"/>
+                            <constraint firstItem="d1M-H1-2pJ" firstAttribute="trailing" secondItem="cUk-NJ-pwL" secondAttribute="trailing" id="NSc-MJ-FuS"/>
+                            <constraint firstItem="HtG-4o-4oi" firstAttribute="trailing" secondItem="d1M-H1-2pJ" secondAttribute="trailing" id="OmT-vE-C2S"/>
+                            <constraint firstItem="BsE-zG-eAh" firstAttribute="top" secondItem="wlC-m4-eyK" secondAttribute="bottom" constant="8" symbolic="YES" id="Q6E-SE-d4o"/>
+                            <constraint firstItem="wlC-m4-eyK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qg4-sB-c83"/>
+                            <constraint firstItem="BsE-zG-eAh" firstAttribute="trailing" secondItem="HtG-4o-4oi" secondAttribute="trailing" id="RHF-iW-jlw"/>
+                            <constraint firstItem="d1M-H1-2pJ" firstAttribute="top" secondItem="HtG-4o-4oi" secondAttribute="bottom" constant="53" id="THa-Vb-dVZ"/>
+                            <constraint firstItem="wlC-m4-eyK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TM7-5f-gUw"/>
+                            <constraint firstItem="BsE-zG-eAh" firstAttribute="leading" secondItem="HtG-4o-4oi" secondAttribute="leading" id="XfL-3o-bRQ"/>
+                            <constraint firstItem="HtG-4o-4oi" firstAttribute="leading" secondItem="d1M-H1-2pJ" secondAttribute="leading" id="YnB-eq-Y2V"/>
+                            <constraint firstItem="HtG-4o-4oi" firstAttribute="top" secondItem="BsE-zG-eAh" secondAttribute="bottom" constant="8" symbolic="YES" id="dBx-j1-cR8"/>
+                            <constraint firstItem="cUk-NJ-pwL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="414" id="wml-Zn-Nr6"/>
+                            <constraint firstItem="wlC-m4-eyK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="xy0-wp-4Cp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="barChart" destination="cUk-NJ-pwL" id="csm-n4-20v"/>
+                        <outlet property="number1" destination="wlC-m4-eyK" id="OIf-eK-yS9"/>
+                        <outlet property="number2" destination="BsE-zG-eAh" id="mCB-tL-Rkq"/>
+                        <outlet property="number3" destination="HtG-4o-4oi" id="iu7-h5-CfB"/>
+                        <outlet property="pieChart" destination="d1M-H1-2pJ" id="BYo-Ze-3v0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
